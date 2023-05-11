@@ -30,10 +30,29 @@ Then you can enjoy your pornhub. You could also integrate these into your system
 
 ## Docker
 1. clone this repo
-2. run following cmd, the PASS is the shadowsocks password, the ADDR is your vpn addr:port
+2. register an account in dockerhub, let's say it's linkedin
 ```
-docker build -t pt-proxy --target client --build-arg PASS=hello --build-arg ADDR=baidu.com:8020 .
+docker login
 ```
+3. run following cmd, the PASS is the shadowsocks password, the ADDR is your vpn addr:port, just use siwu-ld1.internal.linkedin.cn:8020 for example
+```
+docker build -t linkedin/pt-proxy-client --target client --build-arg PASS=hello --build-arg ADDR=siwu-ld1.internal.linkedin.cn .
+docker build -t linkedin/pt-proxy-server --target server --build-arg PASS=hello --build-arg ADDR=siwu-ld1.internal.linkedin.cn .
+
+docker push linkedin/pt-proxy-client
+docker push linkedin/pt-proxy-server
+```
+in this way we've got 2 dockers for server & client and register them in dockerhub
+
+4. in your vpn server run following 
+```
+docker run -p 8020:8020 gaxxx/pt-proxy-server
+```
+5. in your local service run following
+```
+docker run -p 8020:8020 gaxxx/pt-proxy-client
+```
+6. use [shadowsocks-ng](https://github.com/shadowsocks/ShadowsocksX-NG) to add your own ss profiles
 
 
 
