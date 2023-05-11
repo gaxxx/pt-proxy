@@ -2,7 +2,7 @@
     "role": "server",
     "state": ".",
     "local": "127.0.0.1:8021",
-    "server": "0.0.0.0:8028",
+    "server": "0.0.0.0:8020",
     "ptexec": "obfs4proxy -logLevel=INFO -enableLogging=true",
     "ptname": "obfs4"
 }
