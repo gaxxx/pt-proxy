@@ -4,11 +4,8 @@ if [ -n "$PASS" ]; then
 fi
 
 mv ss-server.json /etc/shadowsocks-libev/config.json
-systemctl restart shadowsocks-libev
-
 set -e
-
-if timeout --preserve-status 3s cargo run server.json; then
+if timeout --preserve-status 3s pt-proxy server.json; then
   echo "Command succeeded"
 else
   echo "Command failed with exit code $?"
