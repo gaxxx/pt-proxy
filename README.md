@@ -1,6 +1,6 @@
 # How to use this with obfs4proxy
 
-This tools is used to secure your traffic with the lastest obfuscation protocal.
+This tools is used to secure your traffic with the lastest obfuscation protocol.
 
 jump to Docker section if you don't bother to check the detailed bullshit.
 
@@ -53,6 +53,10 @@ docker run -p 8020:8020 gaxxx/pt-proxy-server
 docker run -p 8020:8020 gaxxx/pt-proxy-client
 ```
 6. use [shadowsocks-ng](https://github.com/shadowsocks/ShadowsocksX-NG) to add your own ss profiles
+
+btw: put your shadowsocks passwd to the Password field
+<img width="557" alt="image" src="https://github.com/gaxxx/pt-proxy/assets/471881/9bf4ab4f-a4ab-481f-be77-fc2351223766">
+
 
 
 
