@@ -29,7 +29,11 @@ Then you can enjoy your pornhub. You could also integrate these into your system
 
 
 ## Docker
-WIP
+1. clone this repo
+2. run following cmd, the PASS is the shadowsocks password, the ADDR is your vpn addr:port
+```
+docker build -t pt-proxy --target client --build-arg PASS=hello --build-arg ADDR=baidu.com:8020 .
+```
 
 
 
