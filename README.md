@@ -57,7 +57,8 @@ docker run -p 8020:8020 gaxxx/pt-proxy-client
 btw: put your shadowsocks passwd to the Password field
 <img width="557" alt="image" src="https://github.com/gaxxx/pt-proxy/assets/471881/9bf4ab4f-a4ab-481f-be77-fc2351223766">
 
-
+## FAQ
+N/A
 
 
 
