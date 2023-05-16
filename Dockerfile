@@ -1,5 +1,5 @@
 # base image
-FROM ubuntu:20.04 as base
+FROM ubuntu:jammy as base
 RUN apt-get update
 RUN apt-get install -y shadowsocks-libev
 RUN apt-get install -y obfs4proxy
